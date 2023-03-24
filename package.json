@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "sass": "^1.59.2"
+  },
+  "name": "proj4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./src/sass/main.scss:./public/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

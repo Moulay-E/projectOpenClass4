@@ -1,0 +1,314 @@
+main {
+  width: 100%;
+  height: 2263px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: purple;
+}
+
+header {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: yellow;
+}
+
+.header__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+  background-color: orange;
+}
+
+.header__sousTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+  background-color: yellow;
+}
+
+.cc::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f007";
+}
+
+.btn--violet {
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: azure;
+  width: 218px;
+  height: 50px;
+}
+
+nav {
+  background-color: orange;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.functioning {
+  background-color: yellow;
+  height: 20%;
+  width: 100%;
+}
+
+.functioning__liste {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  gap: 10%;
+}
+
+.btn--gris {
+  background-color: #F6F6F6;
+  color: black;
+  border-radius: 20px;
+  height: 73px;
+  width: 322px;
+}
+
+.restaurant {
+  background-color: orange;
+  width: 100%;
+  height: 50%;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: red;
+  width: 50%;
+  height: 15%;
+  border-radius: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.cart__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 5%;
+}
+
+footer {
+  height: 10%;
+  width: 100%;
+  color: #F6F6F6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+.grid {
+  display: grid;
+  background-color: aqua;
+  border: solid 2px blue;
+  height: 20%;
+  width: 100%;
+  grid-template-columns: 90% 59px;
+  grid-template-rows: repeat(6, 1fr);
+  row-gap: 12px;
+}
+
+.grid__h {
+  margin: 0;
+  background-color: bisque;
+  grid-row: span 1;
+  height: 100%;
+}
+
+.grid__article {
+  background-color: aliceblue;
+  grid-row: span 1;
+  grid-column: span 2;
+  height: 100%;
+  border: solid 2px black;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 80% 20%;
+}
+
+.gridHover:hover {
+  grid-template-columns: 55% 30% 15%;
+}
+
+.grid__article:hover .grid4 {
+  visibility: visible;
+}
+
+.grid1 {
+  grid-column: 1/3;
+  grid-row: 1/1;
+  background-color: antiquewhite;
+}
+
+.grid2 {
+  grid-column: 1/1;
+  grid-row: 2/2;
+  background-color: yellow;
+}
+
+.grid3 {
+  grid-column: 2/2;
+  grid-row: 2/2;
+  background-color: red;
+}
+
+.grid4 {
+  visibility: hidden;
+  display: grid;
+  grid-column: 3/3;
+  grid-row: 1/3;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  background-color: purple;
+}
+
+.grid__article2 {
+  background-color: aliceblue;
+  grid-row: span 1;
+  grid-column: span 2;
+  height: 100%;
+  border: solid 2px black;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 55% 15% 15% 15%;
+  grid-template-rows: 1fr 1fr;
+}
+
+.gridTest1 {
+  grid-column: 1/5;
+  grid-row: 1/1;
+  background-color: antiquewhite;
+}
+
+.gridTest2 {
+  grid-column: 1/4;
+  grid-row: 2/2;
+  background-color: yellow;
+}
+
+.gridTest3 {
+  grid-column: 3/5;
+  grid-row: 2/2;
+  justify-self: flex-end;
+  background-color: red;
+  font-size: 14px;
+  width: 10%;
+  transition-property: width;
+  transition-duration: 3s;
+}
+
+.gridAnim2 {
+  visibility: hidden;
+  border-radius: 0 20px 20px 0;
+  margin: 0;
+  display: grid;
+  grid-column: 4/5;
+  grid-row: 1/3;
+  height: 100%;
+  width: 10%;
+  transition: width 3s;
+  justify-self: flex-end;
+  align-content: center;
+  background-color: purple;
+}
+
+.grid__article2:hover .gridAnim2 {
+  width: 100%;
+  visibility: visible;
+}
+.grid__article2:hover .gridTest3 {
+  width: 100%;
+}
+
+.articleTest {
+  display: grid;
+  grid-template-columns: 55% 15% 15% 15%;
+  grid-template-rows: 1fr 1fr;
+}
+
+.testGrid1 {
+  background-color: yellow;
+  grid-column: 1/3;
+  grid-row: 1;
+}
+
+.testGrid2 {
+  background-color: yellowgreen;
+  grid-column: 1/3;
+  grid-row: 2/2;
+}
+
+.testGrid3 {
+  background: salmon;
+  grid-column: 3/5;
+  grid-row: 2;
+  justify-self: flex-end;
+  width: 10%;
+  transition: width 1.5s;
+}
+
+.testGrid4 {
+  background-color: midnightblue;
+  grid-column: 4/5;
+  grid-row: 2;
+  justify-self: flex-end;
+  width: 0;
+  height: 100%;
+  transition: width 1.5s;
+  overflow: hidden;
+}
+
+.rotate {
+  width: 0%;
+  height: 100%;
+  grid-column: 4/5;
+  grid-row: 2;
+  background-color: aquamarine;
+  transition: transform 1s, width 1s ease 0.1s;
+  overflow: hidden;
+  justify-self: flex-end;
+}
+
+.articleTest:hover .testGrid4 {
+  background-color: red;
+  width: 100%;
+}
+.articleTest:hover .rotate {
+  transform: rotate(360deg);
+  width: 50%;
+}
+.articleTest:hover .testGrid3 {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
