@@ -382,18 +382,18 @@ ul {
     opacity: 0;
   }
 }
-.grid1 i {
-  position: absolute;
-}
-
 .heart1 {
-  position: absolute;
+  font-size: 2em; /* ajustez la taille selon vos besoins */
+  background: linear-gradient(to right, red 50%, yellow 50%);
+  background-size: 200% 100%;
+  background-position: left center;
+  transition: all 0.5s ease-out;
   background-clip: content-box;
+  padding: 10px;
 }
 
-.heart2 {
-  position: relative;
-  background-color: red;
+.heart1:hover {
+  background-position: center right;
 }
 
 /* First, style the loading element with desired setup */

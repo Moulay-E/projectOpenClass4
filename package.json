@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "font-awesome": "^4.7.0",
     "sass": "^1.59.2"
   },
   "name": "proj4",
