@@ -271,7 +271,7 @@ ul {
 .testGrid3 {
   background: salmon;
   grid-column: 3/5;
-  grid-row: 2;
+  grid-row: 1/3;
   justify-self: flex-end;
   width: 10%;
   transition: width 1.5s;
@@ -280,35 +280,122 @@ ul {
 .testGrid4 {
   background-color: midnightblue;
   grid-column: 4/5;
-  grid-row: 2;
+  grid-row: 1/3;
   justify-self: flex-end;
-  width: 0;
+  width: 0%;
   height: 100%;
   transition: width 1.5s;
   overflow: hidden;
+  margin: 0;
+  display: grid;
 }
 
 .rotate {
+  align-self: center;
   width: 0%;
-  height: 100%;
-  grid-column: 4/5;
-  grid-row: 2;
+  height: 20%;
+  grid-column: 2/5;
+  grid-row: 1/3;
   background-color: aquamarine;
   transition: transform 1s, width 1s ease 0.1s;
   overflow: hidden;
-  justify-self: flex-end;
+  justify-self: flex-start;
+  transform-origin: 20% 50%;
 }
 
 .articleTest:hover .testGrid4 {
   background-color: red;
   width: 100%;
 }
+
 .articleTest:hover .rotate {
-  transform: rotate(360deg);
+  animation: rotate 1s linear forwards;
   width: 50%;
 }
+
 .articleTest:hover .testGrid3 {
   width: 100%;
 }
+
+.articleTest:hover .testGrid3 {
+  width: 100%;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  background: linear-gradient(165deg, rgb(255, 255, 255) 0%, rgb(220, 220, 220) 40%, rgb(170, 170, 170) 98%, rgb(10, 10, 10) 100%);
+  border-radius: 100%;
+  position: relative;
+  animation: fadeOut 5s linear forwards;
+}
+
+.loader:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border-bottom: 0 solid rgba(255, 255, 255, 0.0196078431);
+  box-shadow: 0 -10px 20px 20px rgba(255, 255, 255, 0.2509803922) inset, 0 -5px 15px 10px rgba(255, 255, 255, 0.3137254902) inset, 0 -2px 5px rgba(255, 255, 255, 0.5019607843) inset, 0 -3px 2px rgba(255, 255, 255, 0.7333333333) inset, 0 2px 0px #ffffff, 0 2px 3px #ffffff, 0 5px 5px rgba(255, 255, 255, 0.5647058824), 0 10px 15px rgba(255, 255, 255, 0.3764705882), 0 10px 20px 20px rgba(255, 255, 255, 0.2509803922);
+  filter: blur(3px);
+  animation: 0s rotate linear forwards;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1;
+  animation-name: fadeInOut;
+  animation-duration: 0s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.grid1 i {
+  position: absolute;
+}
+
+.heart1 {
+  position: absolute;
+  background-clip: content-box;
+}
+
+.heart2 {
+  position: relative;
+  background-color: red;
+}
+
+/* First, style the loading element with desired setup */
 
 /*# sourceMappingURL=style.css.map */
