@@ -190,7 +190,7 @@
     justify-self: flex-end;
     width:0%;
     height: 100%;
-   transition: width 1.5s;
+   transition: width 1.5s ease;
     overflow: hidden;
     margin: 0;
     display: grid;
@@ -207,10 +207,28 @@
    justify-self: flex-start;
    transform-origin: 20% 50%;
 }
-
+.fa-bell {
+    // display: grid;
+    // align-self: center;
+    // justify-self: center;
+    display: grid !important;
+    align-items: center;
+    justify-items: center;
+    justify-self: flex-end;
+    width: 0%;
+    height: 100%;
+    transition:  width 1.5s ease;
+    color: #ffffff;
+}
+.grid4 > .far {
+    display: grid;
+}
 .articleTest:hover  .testGrid4 {
     background-color: red;
     width: 100%;
+    & .fa-bell{
+        width: 100%;
+    }
 }
 .articleTest:hover  .rotate {
     animation: rotate 1s linear forwards;
