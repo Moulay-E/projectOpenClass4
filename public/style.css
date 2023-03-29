@@ -339,21 +339,21 @@ ul {
   width: 100%;
 }
 
-.loader {
+.rien {
   width: 100px;
   height: 100px;
   z-index: 2;
   background: linear-gradient(165deg, #FF79DA 0%, #FF79DA 40%, rgb(170, 170, 170) 98%, rgb(10, 10, 10) 100%);
   border-radius: 100%;
   position: relative;
-  animation: fadeOut 5s linear;
+  animation: fadeOut 5s linear forwards;
   display: grid;
   justify-items: center;
   align-items: center;
   font-size: 24px;
 }
 
-.loader:before {
+.rien:before {
   position: absolute;
   content: "";
   width: 100%;
@@ -385,6 +385,115 @@ ul {
   animation-duration: 5s;
 }
 
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #9356DC;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+.loader {
+  z-index: 2;
+  font-size: 48px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #263238;
+  box-sizing: border-box;
+  text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
+  letter-spacing: 2px;
+  position: relative;
+  animation: fadeOut 3.5s linear forwards;
+}
+
+.loader::after {
+  content: "Ohmyfood";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FF79DA;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: animloader 3.5s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+body {
+  animation: overY 5s linear forwards;
+}
+
+@keyframes overY {
+  0% {
+    overflow-y: hidden;
+  }
+  100% {
+    overflow-y: auto;
+  }
+}
 .animation {
   position: fixed;
   top: 0;
@@ -397,6 +506,7 @@ ul {
   animation-duration: 5s;
   animation-fill-mode: forwards;
   pointer-events: none;
+  overflow-y: hidden;
 }
 
 @keyframes fadeInOut {
@@ -408,7 +518,6 @@ ul {
   }
   100% {
     opacity: 0;
-    display: none;
     z-index: 0;
   }
 }

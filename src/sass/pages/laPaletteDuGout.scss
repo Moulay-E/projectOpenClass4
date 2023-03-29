@@ -243,7 +243,7 @@
 }
 
 
-.loader {
+.rien {
     width: 100px;
     height: 100px;
     z-index: 2;
@@ -256,8 +256,8 @@
     );
     border-radius: 100%;
     position: relative;
-    animation: fadeOut 5s linear ;
-    //forwards
+    animation: fadeOut 5s linear forwards;
+   
 
     display: grid;
     justify-items: center;
@@ -265,7 +265,7 @@
     font-size: 24px;
   }
 
-  .loader:before {
+  .rien:before {
     position: absolute;
     content: "";
     width: 100%;
@@ -303,6 +303,126 @@
     animation-duration: 5s;
     // animation-fill-mode: forwards;
   }
+
+
+  .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    // animation: fadeOut 5s linear forwards;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #9356DC;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+
+
+
+  
+
+  .loader {
+    z-index: 2;
+    font-size: 48px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #263238;
+    box-sizing: border-box;
+    text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeOut 3.5s linear forwards;
+  }
+  .loader::after {
+    content: 'Ohmyfood';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FF79DA ;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: animloader 3.5s linear infinite;
+  }
+  
+  @keyframes animloader {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+
+
+
+
+body {
+    animation: overY 5s linear forwards;
+}
+@keyframes overY {
+    0% {
+        overflow-y: hidden;
+    }
+    
+    100% {
+        overflow-y:auto;
+    }
+  }
+
+
+
+
   
   .animation {
     position: fixed;
@@ -316,6 +436,7 @@
     animation-duration: 5s;
     animation-fill-mode: forwards;
     pointer-events: none;
+    overflow-y: hidden;
   }
   
   @keyframes fadeInOut {
@@ -325,17 +446,11 @@
     50% {
       opacity: 1;
     }
-    // 90%{
-    //     opacity: 0;
-    //     width: 100%;
-    //     height: 100%;
-    // }
+
     100% {
       opacity: 0;
-      display: none;
+    //   display: none;
       z-index: 0;
-    //   width: 0%;
-    //   height: 0%;
     }
   }
   //display none
@@ -354,7 +469,8 @@
     position: relative;
     z-index: 0;
     background: linear-gradient(to left, rgb(255, 255, 255)50%, rgba(255, 255, 255, 0.5)0%),
-    linear-gradient(45deg, rgba(236,93,197,1) 0%, rgba(147,86,220,1) 100%);    background-size: 200% 100%;
+    linear-gradient(45deg, rgba(236,93,197,1) 0%, rgba(147,86,220,1) 100%);  
+    background-size: 200% 100%;
     background-position: right center;
     color: transparent;
     background-clip: text;
