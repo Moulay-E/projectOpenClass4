@@ -1,7 +1,7 @@
 
 
 body {
-  animation: overY 5s linear forwards;
+  animation: overY 0s linear forwards;
 }
 @keyframes overY {
   0% {
@@ -32,7 +32,7 @@ body {
   background-color: #99E2D0;
   z-index: 2;
   animation-name: fadeInOut;
-  animation-duration: 5s;
+  animation-duration: 0s;
   animation-fill-mode: forwards;
   pointer-events: none;
   overflow-y: hidden;
@@ -68,7 +68,7 @@ body {
   text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
   letter-spacing: 2px;
   position: relative;
-  animation: fadeOut 3.5s linear forwards;
+  animation: fadeOut 0s linear forwards;
 }
 .loader::after {
   content: 'Ohmyfood';
@@ -80,7 +80,7 @@ body {
   height: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  animation: animloader 3.5s linear infinite;
+  animation: animloader 0s linear infinite;
 }
 
 @keyframes animloader {
@@ -99,7 +99,7 @@ body {
 
   z-index: 2;
   animation-name:fadeOut;
-  animation-duration: 5s;
+  animation-duration: 0s;
   color: #FF79DA ;
   font-size: 40px;
   // animation-fill-mode: forwards;
@@ -114,8 +114,6 @@ body {
       visibility: hidden;
   }
 }
-
-
 
 .lds-ellipsis {
   grid-row: 4/4;
@@ -183,11 +181,10 @@ nav {
   opacity: 0;
   // animation: appear 10.5s linear forwards;
   animation-name: appear;
-  animation-duration: 1s;
-  animation-delay: 3s;
+  animation-duration: 0s;
+  animation-delay: 0s;
   animation-fill-mode: forwards;
 }
-
 @keyframes appear {
   from {
     opacity: 0;
@@ -198,22 +195,68 @@ nav {
   
 }
 
+nav {
+  height: 4%;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+
+a {
+  text-decoration: none;
+}
+.nav__link {
+background-color: aqua;
+justify-self: center;
+}
+.fa-arrow-left {
+  justify-self: center;
+}
+
+.header__img {
+  background-color: red;
+    width: 100%;
+    height: 15%;
+}
+.header__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .grid {
     display: grid;
     background-color: aqua;
     border: solid 2px blue;
-    height: 20%;
+    height: 25%;
     width: 100%;
     grid-template-columns: 90% 59px;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     row-gap: 12px;
+}
+.grid__header {
+  display: grid;
+  grid-row: 1/1;
+  grid-template-rows: 1fr;
+  grid-template-columns: 10% 80% 10%;
+}
+.grid__header h2 {
+  display: grid;
+  justify-content: center;
+  grid-row: 1/1;
+  grid-column: 2/2;
+}
+.fa-heart {
+  display: grid !important;
+  grid-row: 1/1;
+  grid-column: 3/3;
+  justify-self: center;
+  align-self: center;
 }
 
 .grid__h{
     margin: 0;
     background-color: bisque;
-    grid-row: span 1;
-
+    grid-row: 2/2;
     height: 100%;
 }
 
@@ -225,110 +268,20 @@ nav {
     border: solid 2px black;
     border-radius: 20px;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 80% 20%;
-    
-}
-.gridHover:hover {
-    grid-template-columns: 55% 30% 15%;
-}
-.grid__article:hover .grid4{
-   visibility: visible;
-} 
-
-
-
-.grid1 {
-    grid-column: 1/3;
-    grid-row: 1/1;
-    background-color: antiquewhite;
-}
-.grid2 {
-    grid-column: 1/1;
-    grid-row: 2/2;
-    background-color: yellow;
-}
-.grid3 {
-    grid-column: 2/2;
-    grid-row: 2/2;
-    background-color: red;
-}
-.grid4 {
-    visibility: hidden;
-    display: grid;
-    grid-column: 3/3;
-    grid-row: 1/3;
-    height: 100%;
-    justify-content: center;
-    align-content: center;
-    background-color: purple;
-}
-
-
-
-.grid__article2 {
-    background-color: aliceblue;
-    grid-row: span 1;
-    grid-column: span 2;
-    height: 100%;
-    border: solid 2px black;
-    border-radius: 20px;
-    display: grid;
-    grid-template-columns: 55% 15% 15% 15%;
-    grid-template-rows: 1fr 1fr;
-    
-}
-.gridTest1 {
-    grid-column: 1/5;
-    grid-row: 1/1;
-    background-color: antiquewhite;
-}
-.gridTest2 {
-    grid-column: 1/4;
-    grid-row: 2/2;
-    background-color: yellow;
-}
-.gridTest3 {
-    grid-column: 3/5;
-    grid-row: 2/2;
-    justify-self: flex-end;
-    background-color: red;
-    font-size: 14px;
-    width: 10%;
-    transition-property: width;
-    transition-duration: 3s;
-}
-.gridAnim2 {
-    visibility: hidden;
-    border-radius: 0 20px  20px 0;
-    margin: 0;
-    display: grid;
-    grid-column: 4/5;
-    grid-row: 1/3;
-    height: 100%;
-    width: 10%;
-    transition: width 3s;
-    justify-self: flex-end;
-    align-content: center;
-    background-color: purple;   
-}
-.grid__article2:hover{
-
-    & .gridAnim2{
-        width: 100%;
-    visibility: visible;
-    } 
-     & .gridTest3 {
-      width: 100%;
-    }
-} 
-
-
-.articleTest  {
-    display: grid;
     grid-template-columns: 55% 15% 15% 15%;
     grid-template-rows: 1fr 1fr;
 }
+.article1 {
+  grid-row: 3/3;
+}
+.article2 {
+  grid-row: 4/4;
+}
+.article3 {
+  grid-row: 5/5;
+}
+
+
 .testGrid1 {
     background-color: yellow;
     grid-column: 1/3;
@@ -359,18 +312,6 @@ nav {
     margin: 0;
     display: grid;
 }
-.rotate {
-    align-self: center;
-   width:0%;
-   height: 20%;
-   grid-column: 2/5;
-   grid-row: 1/3;
-   background-color: aquamarine;
-   transition: transform 1s, width 1s ease 0.1s;
-   overflow: hidden;
-   justify-self: flex-start;
-   transform-origin: 20% 50%;
-}
 .fa-bell {
     display: grid !important;
     align-items: center;
@@ -381,34 +322,19 @@ nav {
     transition:  width 1.5s ease;
     color: #ffffff;
 }
-.grid4 > .far {
-    display: grid;
-}
-.articleTest:hover  .testGrid4 {
+.grid__article:hover  .testGrid4 {
     background-color: red;
     width: 100%;
     & .fa-bell{
         width: 100%;
     }
 }
-.articleTest:hover  .rotate {
-    animation: rotate 1s linear forwards;
-    width: 50%;
-}
-.articleTest:hover  .testGrid3 {
+.grid__article:hover  .testGrid3 {
     width: 100%;
 }
-.articleTest:hover  .testGrid3 {
+.grid__article:hover  .testGrid3 {
     width: 100%;
 }
-
-
-  @keyframes rotate {
-   
-
-    100% {  transform: rotate(360deg);
-            }
-  }
 
 
 .heart1::before {
