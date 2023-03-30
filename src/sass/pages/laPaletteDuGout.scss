@@ -1,24 +1,185 @@
 
-// .test  {
-//     display:grid;
-//     grid-template-columns: 5% 90% 5%;
-//     grid-template-rows:  20% 10% 20% 10%;
-// }
 
-// nav {
-//     display: grid;
-//     grid-column-start: 2;
-//     grid-column-end: 4;
-// }
+body {
+  animation: overY 5s linear forwards;
+}
+@keyframes overY {
+  0% {
+      overflow-y: hidden;
+  }
+  
+  100% {
+      overflow-y:auto;
+  }
+}
 
-// .grid > .grid2 {
-//     background-color: aqua;
-//     border: solid 2px  rgb(18, 18, 225);
-//     height: 100%;
-//     display: grid;
-//     justify-items: center;
-//     align-items: center;
-// }
+
+.animation {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  grid-template-rows: 35% 10% 10% 10% 35%;
+  grid-template-columns: 10% 80% 10%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #99E2D0;
+  z-index: 2;
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  overflow-y: hidden;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    z-index: 3;
+  }
+
+  100% {
+    opacity: 0;
+  //   display: none;
+    z-index: 0;
+  }
+}
+
+.loader {
+  grid-row: 2/2;
+  grid-column: 2/2;
+
+  z-index: 2;
+  font-size: 48px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #f6f9fb;
+  box-sizing: border-box;
+  text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
+  letter-spacing: 2px;
+  position: relative;
+  animation: fadeOut 3.5s linear forwards;
+}
+.loader::after {
+  content: 'Ohmyfood';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FF79DA ;
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: animloader 3.5s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+.fa-utensils{
+  grid-row: 3/3;
+  grid-column: 2/2;
+
+  z-index: 2;
+  animation-name:fadeOut;
+  animation-duration: 5s;
+  color: #FF79DA ;
+  font-size: 40px;
+  // animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+
+
+
+.lds-ellipsis {
+  grid-row: 4/4;
+  grid-column: 2/2;
+
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #9356DC;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
+
 .grid {
     display: grid;
     background-color: aqua;
@@ -54,7 +215,6 @@
     grid-template-columns: 55% 30% 15%;
 }
 .grid__article:hover .grid4{
-    // transition: visibility 0.5s;
    visibility: visible;
 } 
 
@@ -74,12 +234,8 @@
     grid-column: 2/2;
     grid-row: 2/2;
     background-color: red;
-    // &:hover + .grid4{
-    //     visibility: visible;
-    // }
 }
 .grid4 {
-    // transition: visibility 0.5s ease;
     visibility: hidden;
     display: grid;
     grid-column: 3/3;
@@ -104,9 +260,6 @@
     grid-template-rows: 1fr 1fr;
     
 }
-
-
-
 .gridTest1 {
     grid-column: 1/5;
     grid-row: 1/1;
@@ -126,12 +279,8 @@
     width: 10%;
     transition-property: width;
     transition-duration: 3s;
-    // &:hover + .grid4{
-    //     visibility: visible;
-    // }
 }
 .gridAnim2 {
-    // transition: visibility 0.5s ease;
     visibility: hidden;
     border-radius: 0 20px  20px 0;
     margin: 0;
@@ -145,7 +294,6 @@
     align-content: center;
     background-color: purple;   
 }
-
 .grid__article2:hover{
 
     & .gridAnim2{
@@ -153,7 +301,6 @@
     visibility: visible;
     } 
      & .gridTest3 {
-    //     transition: width 1s;
       width: 100%;
     }
 } 
@@ -164,7 +311,6 @@
     grid-template-columns: 55% 15% 15% 15%;
     grid-template-rows: 1fr 1fr;
 }
-
 .testGrid1 {
     background-color: yellow;
     grid-column: 1/3;
@@ -208,9 +354,6 @@
    transform-origin: 20% 50%;
 }
 .fa-bell {
-    // display: grid;
-    // align-self: center;
-    // justify-self: center;
     display: grid !important;
     align-items: center;
     justify-items: center;
@@ -237,49 +380,10 @@
 .articleTest:hover  .testGrid3 {
     width: 100%;
 }
-
 .articleTest:hover  .testGrid3 {
     width: 100%;
 }
 
-
-.rien {
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    background: linear-gradient(
-      165deg,
-      #FF79DA 0%,
-      #FF79DA 40%,
-      rgb(170, 170, 170) 98%,
-      rgb(10, 10, 10) 100%
-    );
-    border-radius: 100%;
-    position: relative;
-    animation: fadeOut 5s linear forwards;
-   
-
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    font-size: 24px;
-  }
-
-  .rien:before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    border-bottom: 0 solid #9356DC  ;
-    box-shadow: 0 -10px 20px 20px #FF79DA  inset,
-      0 -5px 15px 10px #9356DC   inset, 0 -2px 5px #9356DC   inset,
-      0 -3px 2px #9356DC   inset, 0 2px 0px #9356DC , 0 2px 3px #ffffff,
-      0 5px 5px #9356DC  , 0 10px 15px #9356DC  , 0 10px 20px 20px #ffffff40;
-    filter: blur(3px);
-    animation: 5s rotate linear ;
-    //forwards
-  }
 
   @keyframes rotate {
    
@@ -288,205 +392,11 @@
             }
   }
 
-  @keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-  }
-  .fa-utensils{
-    grid-row: 3/3;
-    grid-column: 2/2;
-
-    z-index: 2;
-    animation-name:fadeOut;
-    animation-duration: 5s;
-    color: #FF79DA ;
-    font-size: 40px;
-    // animation-fill-mode: forwards;
-  }
-
-
-  .lds-ellipsis {
-    grid-row: 4/4;
-    grid-column: 2/2;
-
-    display: inline-block;
-    position: relative;
-    z-index: 2;
-    width: 80px;
-    height: 80px;
-    // animation: fadeOut 5s linear forwards;
-  }
-  .lds-ellipsis div {
-    position: absolute;
-    top: 33px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: #9356DC;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
-  }
-
-  .lds-ellipsis div:nth-child(1) {
-    left: 8px;
-    animation: lds-ellipsis1 0.6s infinite;
-  }
-  .lds-ellipsis div:nth-child(2) {
-    left: 8px;
-    animation: lds-ellipsis2 0.6s infinite;
-  }
-  .lds-ellipsis div:nth-child(3) {
-    left: 32px;
-    animation: lds-ellipsis2 0.6s infinite;
-  }
-  .lds-ellipsis div:nth-child(4) {
-    left: 56px;
-    animation: lds-ellipsis3 0.6s infinite;
-  }
-  @keyframes lds-ellipsis1 {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @keyframes lds-ellipsis3 {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  @keyframes lds-ellipsis2 {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(24px, 0);
-    }
-  }
-
-
-
-  
-
-  .loader {
-    grid-row: 2/2;
-    grid-column: 2/2;
-
-    z-index: 2;
-    font-size: 48px;
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: #f6f9fb;
-    box-sizing: border-box;
-    text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
-    letter-spacing: 2px;
-    position: relative;
-    animation: fadeOut 3.5s linear forwards;
-  }
-  .loader::after {
-    content: 'Ohmyfood';
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #FF79DA ;
-    width: 20%;
-    height: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    animation: animloader 3.5s linear infinite;
-  }
-  
-  @keyframes animloader {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-
-
-
-
-
-body {
-    animation: overY 5s linear forwards;
-}
-@keyframes overY {
-    0% {
-        overflow-y: hidden;
-    }
-    
-    100% {
-        overflow-y:auto;
-    }
-  }
-
-
-
-
-  
-  .animation {
-      display: grid;
-      justify-items: center;
-      align-items: center;
-      gap: 0;
-      margin: 0;
-      padding: 0;
-    //   grid-template-columns:10% 80% 10% ;
-      grid-template-rows: 35% 10% 10% 10% 35%;
-    grid-template-columns: 10% 80% 10%;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #99E2D0;
-    z-index: 2;
-    animation-name: fadeInOut;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-    pointer-events: none;
-    overflow-y: hidden;
-  }
-  
-  @keyframes fadeInOut {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 1;
-      z-index: 3;
-    }
-
-    100% {
-      opacity: 0;
-    //   display: none;
-      z-index: 0;
-    }
-  }
-  //display none
-
-// .heart1::before {
-//     position: absolute;
-//     z-index: 1;
-// }
 
 .heart1::before {
-    position: fixed;
+    position: absolute;
     z-index: 1;
 }
-
 .heart2 {
     position: relative;
     z-index: 0;
@@ -510,172 +420,4 @@ footer {
     background-position: left center;
 
 }
-// .heart1 {
-// //     position: relative;
-// //    color: white;
-// // //    transform: scaleX(0);
-// //    transition: color 5s linear;
-// // //    transition: color 3s linear;
-// //    transform-origin: 0% 50%;
 
-// // font-size: 2em; /* ajustez la taille selon vos besoins */
-// background: linear-gradient(to right, red 50%, yellow 50%);
-// background-size: 200% 100%;
-// background-position: left center;
-// transition: background-position 0.5s ease-out;
-// background-clip: content-box;
-// font-weight: bold;
-// -webkit-background-clip: text;
-// color: transparent;
-   
-// }
-// .heart1:hover {
-//     background-position: center right;
-//   }
-
-// .heart1:hover  .heart2{
-//     color: red;
-//     // transform: scaleX(1);
-// }
-
-//   .loader2{
-//     display: block;
-//     position: relative;
-//     height: 12px;
-//     width: 6%;
-//     margin-top: 1%;   
-//     border: 1px solid #a29e9e;
-//     border-radius: 10px;
-//     overflow: hidden;
-//   }
-//   .loader2:after{
-//     content: '';
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     height: 100%;
-//     width: 0;
-//     background: #ebe3e0;
-//     animation: 6s prog ease-in infinite;
-//   }
-  
-//   @keyframes prog {
-//     to  {   width: 100%;}
-//   }
-  
-
-/* First, style the loading element with desired setup */
-// .loading {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: #fff;
-//     z-index: 9999;
-//   }
-  
-//   /* Then, define the keyframes of the animation */
-//   @keyframes fadeout {
-//     0% {
-//       opacity: 1;
-//     }
-//     100% {
-//       opacity: 0;
-//       visibility: hidden;
-//     }
-//   }
-  
-//   /* Finally, apply the animation to the loading element */
-//   .loading {
-//     animation: fadeout 5s linear forwards;
-//   }
-  
-
-//   .loader {
-//     border-radius: 50%;
-//     width: 3em;
-//     height: 3em;
-//     margin: 0 auto;
-//     font-size: 10px;
-//     position: relative;
-//     animation: loadingSpinner 0.5s infinite linear;
-//   }
-  
-//   .loader:before {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     left: 50%;
-//     width: 0.5em;
-//     height: 1.5em;
-//     border-radius: 20%;
-//     background-color: #ddd;
-//     transform: translateX(-50%) rotate(0deg);
-//     animation: loadingBar 1s infinite ease-in-out;
-
-//   }
-
-
-
-
-// .grid__article p {
-//     grid-row: 2/2;
-// }
-// .price {
-// grid-row: 2/span 1;
-// grid-column: 2/2;
-// align-self: center;
-// justify-self: end;
-// width: 12%;
-// transition:  transform  5000ms;
-// }
-// .price:hover {
-//     background-color: green;
-//     transform:scale(1.5) rotate(30deg);
-// }
-
-// .grid {
-//     background-color: yellow;
-//     display: grid;
-//     grid-template-columns: minmax(100px, auto) 60% [body]19% ;
-//     grid-template-rows: repeat(3, 1fr);
-//     margin: 0;
-//     padding: 0;
-//     grid-gap:10px;
-    // grid-template-areas: 
-    // "header header header"
-    // "footer article article"
-    // "footer footer2 footer3";
-// }
-
-// .child {
-//     grid-column-start: 1;
-//     order: -1;
-    // height: 100%;
-    // grid-column: 1/span 2;
-    // grid-row: 1/3;
-    // z-index: 0;
-    // grid-area: article;
-// }
-// .childH2{
-    // z-index: 1;
-    // grid-column: 2/4;
-    // grid-row: 1 / 3;
-    // height: 100%;
-    // grid-area: header;
-//     grid-column-start: body;
-// }
-
-// .child3 {
-    // grid-area: footer;
-// }
-// .child2 {
-    // grid-area: footer2;
-    // align-self: self-end;
-    // justify-self: self-end;
-// }
