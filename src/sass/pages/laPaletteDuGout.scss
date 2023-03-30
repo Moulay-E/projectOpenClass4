@@ -179,6 +179,24 @@ body {
 }
 
 
+nav {
+  opacity: 0;
+  // animation: appear 10.5s linear forwards;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  
+}
 
 .grid {
     display: grid;
