@@ -1,10 +1,5 @@
-main {
-  width: 100%;
+body {
   height: 2263px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: purple;
 }
 
 header {
@@ -340,29 +335,40 @@ a {
   height: 100%;
 }
 
+main {
+  height: 30%;
+}
+
 .menu {
   display: grid;
   background-color: aqua;
   border: solid 2px blue;
-  height: 25%;
+  height: 100%;
   width: 100%;
   grid-template-columns: 90% 59px;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 15% 10% repeat(3, 1fr);
   row-gap: 12px;
+  border-radius: 20px 20px 0 0;
 }
 
 .menu__header {
   display: grid;
   grid-row: 1/1;
+  grid-column: 1/4;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  background-color: #07664e;
   grid-template-rows: 1fr;
   grid-template-columns: 10% 80% 10%;
 }
 
-.menu__header h2 {
+.menu__header__title {
   display: grid;
   justify-content: center;
   grid-row: 1/1;
   grid-column: 2/2;
+  font-size: 28px;
+  font-weight: 400;
 }
 
 .fa-heart {
@@ -378,6 +384,8 @@ a {
   background-color: bisque;
   grid-row: 2/2;
   height: 100%;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .menu__btn {
@@ -408,21 +416,27 @@ a {
   background-color: yellow;
   grid-column: 1/3;
   grid-row: 1;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .menu__btn__subtile {
   background-color: yellowgreen;
   grid-column: 1/3;
   grid-row: 2/2;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .menu__btn__price {
   background: salmon;
   grid-column: 3/5;
-  grid-row: 1/3;
+  grid-row: 2/2;
   justify-self: flex-end;
   width: 10%;
   transition: width 1.5s;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .menu__btn__icon {
@@ -445,6 +459,7 @@ a {
   justify-self: flex-end;
   width: 0%;
   height: 100%;
+  font-size: 20px;
   transition: width 1.5s ease;
   color: #ffffff;
 }
@@ -459,6 +474,10 @@ a {
 
 .menu__btn:hover .menu__btn__price {
   width: 100%;
+}
+
+.fa-heart {
+  font-size: 22px;
 }
 
 .heart1::before {
