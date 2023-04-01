@@ -211,7 +211,7 @@ body {
     width: 100%;
   }
 }
-.fa-utensils {
+.ustansils--loader {
   grid-row: 3/3;
   grid-column: 2/2;
   z-index: 2;
@@ -342,36 +342,33 @@ a {
 }
 
 main {
-  height: 30%;
+  height: 45%;
 }
 
 .menu {
   display: grid;
   justify-items: center;
   grid-template-columns: 90% 10%;
-  grid-template-rows: 90px 50px repeat(3, 69px);
-  z-index: 2;
+  grid-template-rows: 50px repeat(3, 69px) 10px;
   row-gap: 10px;
-  position: relative;
-  top: -20px;
   border-radius: 20px 20px 0 0;
   background-color: aqua;
   border: solid 2px blue;
+  align-items: flex-start;
 }
 
-.menu__header {
+.main__header {
   display: grid;
-  grid-row: 1/1;
-  grid-column: 1/4;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  top: -20px;
+  height: 7%;
   border-radius: 20px 20px 0 0;
   background-color: #07664e;
   grid-template-rows: 1fr;
   grid-template-columns: 75% 25%;
 }
 
-.menu__header__title {
+.main__header__title {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -393,7 +390,7 @@ main {
 .menu__title {
   display: grid;
   align-items: flex-end;
-  grid-row: 2/2;
+  grid-row: 1/1;
   height: 100%;
   width: 95%;
   background-color: bisque;
@@ -419,15 +416,15 @@ main {
 }
 
 .menu__btn--orderTop {
-  grid-row: 3/3;
+  grid-row: 2/2;
 }
 
 .menu__btn--orderMiddle {
-  grid-row: 4/4;
+  grid-row: 3/3;
 }
 
 .menu__btn--orderBottom {
-  grid-row: 5/5;
+  grid-row: 4/4;
 }
 
 .menu__btn__title {
@@ -522,10 +519,52 @@ main {
   background-position: center left;
 }
 
+.order {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 5%;
+}
+
+.order__btn {
+  background: linear-gradient(45deg, rgb(236, 93, 197) 0%, rgb(147, 86, 220) 100%);
+  color: white;
+  border-radius: 25px;
+  border: unset;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  height: 50px;
+  width: 218px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+}
+
 footer {
-  background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.5) 0%), linear-gradient(45deg, rgb(236, 93, 197) 0%, rgb(147, 86, 220) 100%);
-  background-size: 200% 100%;
-  background-position: left center;
+  display: grid;
+  grid-template-columns: 20px 70%;
+  grid-template-rows: 50px 106px 30px;
+  height: 187px;
+  background-color: black;
+  color: white;
+}
+
+.footer__title {
+  display: grid;
+  align-self: center;
+  grid-column: 2/2;
+  grid-row: 1/1;
+  font-size: 18px;
+  align-items: center;
+  font-weight: 400;
+  font-family: Shrikhand;
+}
+
+.liste {
+  grid-column: 2/2;
+  grid-row: 2/2;
+  display: grid;
+  row-gap: 1%;
+  font-family: Roboto;
 }
 
 /*# sourceMappingURL=style.css.map */
