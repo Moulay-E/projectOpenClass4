@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-.liste, .footer__title, footer, .order, .menu__card__icon, .menu__card, .menu__title, .menu, .main__header__title, .main__header, nav {
+.liste, .footer__title, footer, .order, .menu__card__icon, .menu__card, .menu__title, .menu, .main__header__title, .main__header, .nav__header, .main__home__restaurant, .main__home, .header__home__liste, .header__home, .nav__home__main__title, .nav__home__main, .nav__home__title, .nav__home {
   display: grid;
 }
 
@@ -213,7 +213,7 @@ body {
     transform: translate(24px, 0);
   }
 }
-nav {
+.nav__header {
   opacity: 0;
   animation-name: appear;
   animation-duration: 0s;
@@ -247,11 +247,41 @@ nav {
 }
 
 body {
-  height: 2263px;
+  height: 2441px;
 }
 
-header {
-  height: 5%;
+.nav__home {
+  height: 16%;
+  background-color: orange;
+  grid-template-rows: 63px 50px 71%;
+}
+.nav__home__title {
+  justify-self: center;
+}
+.nav__home__subtile {
+  justify-self: center;
+}
+
+.nav__home__main {
+  text-align: center;
+  justify-items: center;
+  background-color: purple;
+  font-family: Roboto;
+}
+.nav__home__main__title {
+  width: 80%;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.nav__home__main__subtile {
+  width: 80%;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.header__home {
+  height: 18%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -277,46 +307,15 @@ header {
   background-color: yellow;
 }
 
-.cc::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f007";
-}
-
-.btn--violet {
-  border-radius: 25px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: azure;
-  width: 218px;
-  height: 50px;
-}
-
-nav {
-  background-color: orange;
-  width: 100%;
-  height: 10%;
-  flex-direction: column;
-  align-items: center;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.functioning {
-  background-color: yellow;
+.header__home {
   height: 20%;
-  width: 100%;
+  justify-items: center;
 }
-
-.functioning__liste {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 80%;
-  width: 100%;
-  gap: 10%;
+.header__home__title {
+  height: 20%;
+}
+.header__home__liste {
+  row-gap: 24px;
 }
 
 .btn--gris {
@@ -327,33 +326,49 @@ section {
   width: 322px;
 }
 
-.restaurant {
-  background-color: orange;
-  width: 100%;
-  height: 50%;
-  justify-content: space-between;
+.main__home {
+  height: 51%;
+  background-color: aqua;
 }
 
-.card {
+.main__home__restaurant {
+  background-color: orange;
+  height: 51%;
+  grid-template-rows: 100px repeat(4, 20%) 66px;
+}
+
+.main__home__restaurant__card {
   background-color: red;
-  width: 50%;
-  height: 15%;
+  height: 100%;
   border-radius: 15px;
 }
 
-.card img {
+.palette--grid {
+  grid-row: 2/2;
+}
+
+.note--grid {
+  grid-row: 3/3;
+}
+
+.france--grid {
+  grid-row: 4/4;
+}
+
+.delice--grid {
+  grid-row: 5/5;
+}
+
+.main__home__restaurant__card img {
   width: 100%;
+  height: auto;
   height: 70%;
   object-fit: cover;
   border-radius: 15px;
 }
 
-.cart__footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  height: 5%;
+.main__home__restaurant__card__footer {
+  height: 20%;
 }
 
 footer {
@@ -372,8 +387,8 @@ ul {
   padding: 0;
 }
 
-nav {
-  height: 4%;
+.nav__header {
+  height: 63px;
   grid-template-columns: 10% 80% 10%;
 }
 
@@ -400,10 +415,6 @@ a {
   object-fit: cover;
   width: 100%;
   height: 100%;
-}
-
-main {
-  height: 45%;
 }
 
 .main__header {
