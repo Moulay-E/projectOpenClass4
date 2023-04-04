@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-.liste, .footer__title, footer, .order, .menu__card__icon, .menu__card, .menu__title, .menu, .main__header__title, .main__header, .nav__header, .main__home__restaurant__card__footer__heart--grid, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .main__home__restaurant, .main__home, .btn--gris h4, .btn--gris, .header__home__liste, .nav__home__main__title, .nav__home__main, .nav__home__subtile, .nav__home__title, .nav__home {
+.liste, .footer__title, footer, .order, .menu__card__icon, .menu__card, .menu__title, .menu, .main__header__title, .main__header, .nav__header, .main__home__restaurant__card__footer__heart--grid, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .new, .main__home__restaurant__card, .main__home__restaurant, .main__home, .btn--gris h4, .btn--gris, .header__home__liste, .nav__home__main__title, .nav__home__main, .nav__home__subtile, .nav__home__title, .nav__home {
   display: grid;
 }
 
@@ -382,12 +382,12 @@ a {
 }
 
 .main__home__restaurant {
-  grid-template-rows: 100px repeat(4, 20%) 5%;
+  grid-template-rows: 100px repeat(4, 21%) 5%;
   row-gap: 1%;
   grid-template-columns: 90%;
   justify-content: center;
   background-color: orange;
-  height: 59%;
+  height: 56%;
 }
 
 .main__home__restaurant__h2 {
@@ -397,6 +397,8 @@ a {
 }
 
 .main__home__restaurant__card {
+  grid-template-rows: 70% 30%;
+  grid-template-columns: 100%;
   background-color: red;
   height: 100%;
   border-radius: 15px;
@@ -418,19 +420,37 @@ a {
   grid-row: 5/5;
 }
 
+.new {
+  position: relative;
+  grid-row: 1/1;
+  grid-column: 1/1;
+  z-index: 2;
+  top: 8%;
+  left: 73%;
+  height: 29px;
+  width: 80px;
+  justify-content: center;
+  align-content: center;
+  font-size: 14px;
+  border-radius: 2px;
+  color: #008766;
+  background-color: #99E2D0;
+}
+
 .main__home__restaurant__card img {
+  grid-row: 1/1;
+  grid-column: 1/1;
   width: 100%;
-  height: auto;
-  height: 70%;
+  height: 100%;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 
 .main__home__restaurant__card__footer {
+  grid-row: 2/2;
   display: grid;
   grid-template-columns: 80% 20%;
   grid-template-rows: 50% 50%;
-  height: 28%;
 }
 
 .main__home__restaurant__card__footer a {

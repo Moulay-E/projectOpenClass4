@@ -136,6 +136,7 @@ a {
   font-size: 14px;
 }
 
+
   // main {
   //   background-color: brown;
   // }
@@ -145,14 +146,16 @@ a {
     @extend %grid;
   }
   .main__home__restaurant {
-    grid-template-rows:  100px repeat(4, 20%) 5%;
+    grid-template-rows:  100px repeat(4, 21%) 5%;
     row-gap: 1%;
     grid-template-columns: 90%;
     justify-content: center;
     background-color: orange;
-    height: 59%;
+    height: 56%;
     @extend %grid;
   }
+
+  
   .main__home__restaurant__h2{
     align-self: flex-end;
     font-size: 24px;
@@ -160,6 +163,9 @@ a {
   }
   
   .main__home__restaurant__card {
+    @extend %grid;
+    grid-template-rows: 70% 30%;
+    grid-template-columns: 100%;
     background-color: red;
     height: 100%;
     border-radius: 15px;
@@ -176,19 +182,36 @@ a {
   .delice--grid {
     grid-row: 5/5;
   }
-  
+  .new{
+    position: relative;
+    grid-row: 1/1;
+    grid-column: 1/1;
+    z-index: 2;
+    top: 8%;
+    left: 73%;
+    height: 29px;
+    width: 80px;
+   @extend %grid;
+    justify-content: center;
+    align-content: center;
+    font-size: 14px;
+    border-radius: 2px;
+    color: #008766;
+    background-color: $colour-tertiary;
+  }
   .main__home__restaurant__card img {
+    grid-row: 1/1;
+    grid-column: 1/1;
     width: 100%;
-    height: auto;
-    height: 70%;
+    height: 100%;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
   .main__home__restaurant__card__footer {
+    grid-row: 2/2;
     display: grid;
     grid-template-columns: 80% 20%;
     grid-template-rows: 50% 50%;
-    height: 28%;
   }
   .main__home__restaurant__card__footer a {
     grid-column: 1/1;
