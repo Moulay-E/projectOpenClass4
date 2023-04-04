@@ -1,8 +1,8 @@
 
-body {
-    animation: noScroll 0s linear forwards;
+.noScroll {
+    animation: temporaryNoScrolling 0s linear forwards;
   }
-  @keyframes noScroll {
+  @keyframes temporaryNoScrolling {
     0% {
         overflow-y: hidden;
     }
@@ -13,7 +13,7 @@ body {
   }
 
   
-.animation {
+  .loaderBackground {
   display: grid;
   justify-items: center;
   align-items: center;

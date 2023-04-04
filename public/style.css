@@ -53,11 +53,11 @@
   background-position: center left;
 }
 
-body {
-  animation: noScroll 0s linear forwards;
+.noScroll {
+  animation: temporaryNoScrolling 0s linear forwards;
 }
 
-@keyframes noScroll {
+@keyframes temporaryNoScrolling {
   0% {
     overflow-y: hidden;
   }
@@ -65,7 +65,7 @@ body {
     overflow-y: auto;
   }
 }
-.animation {
+.loaderBackground {
   display: grid;
   justify-items: center;
   align-items: center;
@@ -258,6 +258,11 @@ body {
   height: 2441px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .nav__home {
   height: 19%;
   background-color: orange;
@@ -351,8 +356,19 @@ body {
   font-size: 24px;
 }
 
-.fa-circle::after {
+.one::after {
   content: "1";
+}
+
+.two::after {
+  content: "2";
+}
+
+.three::after {
+  content: "3";
+}
+
+.fa-circle::after {
   position: relative;
   left: -15px;
   top: -3px;

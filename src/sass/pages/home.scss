@@ -10,6 +10,10 @@ body {
   height: 2441px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
 .nav__home {
   height: 19%;
   background-color: orange;
@@ -115,8 +119,16 @@ body {
   color: $colour-primary;
   font-size: 24px;
 }
-.fa-circle::after{
+.one::after{
   content: '1';
+}
+.two::after{
+  content: '2';
+}
+.three::after{
+  content: '3';
+}
+.fa-circle::after{
   position: relative;
   left: -15px;
   top: -3px;
