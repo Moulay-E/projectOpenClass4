@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+.body__menuPage{
+height: 1590px;
+}
 
 .nav__header {
   height: 63px;
@@ -20,10 +23,11 @@ justify-self: center;
   justify-self: center;
 }
 
+
 .header__img {
   background-color: red;
     width: 100%;
-    height: 15%;
+    height: 17%;
 }
 .header__img img {
   object-fit: cover;
@@ -180,7 +184,7 @@ justify-self: center;
   @extend %grid ;
   justify-content: center;
   align-content: center;
-  height: 5%;
+  height: 7%;
 }
 
 footer {
