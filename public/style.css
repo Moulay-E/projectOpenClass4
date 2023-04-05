@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-.liste, .footer__title, footer, .order, .menu__card__icon, .menu__card, .menu__title, .menu, .main__header__title, .main__header, .nav__header, .main__home__restaurant__card__footer__heart--grid, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .new, .main__home__restaurant__card, .main__home__restaurant, .main__home, .btn--gris h4, .btn--gris, .header__home__liste, .nav__home__main__title, .nav__home__main, .nav__home__subtile, .nav__home__title, .nav__home {
+.liste, .footer__title, footer, .order, .menu__card__icon, .menu__card, .menu__title, .menu, .main__header__title, .main__header, .nav__header, .main__home__restaurant__card__footer__heart--grid, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .new, .main__home__restaurant__card, .main__home__restaurant, .main__home, .btn--gris h4, .btn--gris, .header__home__liste, .nav__home__main__title, .nav__home__main, .nav__home__subtile, .nav__home__title, .nav__home, .loaderBackground {
   display: grid;
 }
 
-.btn--gris h4, .header__home__liste__title {
+.liste, .menu__card, .btn--gris h4, .header__home__liste__title, .nav__home__main {
   font-family: Roboto;
 }
 
-.nav__home__title {
+.footer__title, .main__header__title, .nav__home__title {
   font-family: Shrikhand;
 }
 
@@ -41,26 +41,25 @@
   }
 }
 .loaderBackground {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  gap: 0;
-  margin: 0;
-  padding: 0;
   grid-template-rows: 35% 10% 10% 10% 35%;
   grid-template-columns: 10% 80% 10%;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #99E2D0;
+  justify-items: center;
+  align-items: center;
   z-index: 2;
   animation-name: fadeInOut;
   animation-duration: 0s;
   animation-fill-mode: forwards;
   pointer-events: none;
   overflow-y: hidden;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #99E2D0;
 }
 
 @keyframes fadeInOut {
@@ -77,32 +76,32 @@
   }
 }
 .loader {
+  display: inline-block;
+  position: relative;
+  animation: fadeOut 0s linear forwards;
   grid-row: 2/2;
   grid-column: 2/2;
   z-index: 2;
   font-size: 48px;
-  display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: #f6f9fb;
   box-sizing: border-box;
   text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
   letter-spacing: 2px;
-  position: relative;
-  animation: fadeOut 0s linear forwards;
 }
 
 .loader::after {
-  content: "Ohmyfood";
+  animation: animloader 0s linear infinite;
+  overflow: hidden;
   position: absolute;
+  box-sizing: border-box;
+  content: "Ohmyfood";
   left: 0;
   top: 0;
   color: #FF79DA;
   width: 20%;
   height: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
-  animation: animloader 0s linear infinite;
 }
 
 @keyframes animloader {
@@ -114,11 +113,11 @@
   }
 }
 .ustansils--loader {
+  animation-name: fadeOut;
+  animation-duration: 0s;
   grid-row: 3/3;
   grid-column: 2/2;
   z-index: 2;
-  animation-name: fadeOut;
-  animation-duration: 0s;
   color: #FF79DA;
   font-size: 40px;
 }
@@ -133,23 +132,23 @@
   }
 }
 .lds-ellipsis {
-  grid-row: 4/4;
-  grid-column: 2/2;
+  z-index: 2;
   display: inline-block;
   position: relative;
-  z-index: 2;
+  grid-row: 4/4;
+  grid-column: 2/2;
   width: 80px;
   height: 80px;
 }
 
 .lds-ellipsis div {
   position: absolute;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
   top: 33px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
   background: #9356DC;
-  animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
 .lds-ellipsis div:nth-child(1) {
@@ -273,8 +272,8 @@
   background-position: right center;
   color: transparent;
   background-clip: text;
-  -webkit-background-clip: text;
   transition: background-position 0.5s ease-out;
+  -webkit-background-clip: text;
 }
 
 .heart1:hover .heart2 {
@@ -339,7 +338,6 @@ a {
   text-align: center;
   justify-items: center;
   background-color: purple;
-  font-family: Roboto;
 }
 .nav__home__main__title {
   grid-row: 2/2;
@@ -365,9 +363,9 @@ a {
 }
 
 .header__home__liste {
+  grid-template-rows: repeat(4, 22%) 14%;
   height: 100%;
   justify-items: center;
-  grid-template-rows: repeat(4, 22%) 14%;
 }
 .header__home__liste__title {
   align-self: center;
@@ -379,8 +377,8 @@ a {
 }
 
 .btn--gris {
-  align-items: center;
   grid-template-columns: 1px 22% 77%;
+  align-items: center;
   height: 73px;
   width: 85%;
   border-radius: 20px;
@@ -427,9 +425,9 @@ a {
 
 .main__home__restaurant {
   grid-template-rows: 100px repeat(4, 21%) 5%;
-  row-gap: 1%;
   grid-template-columns: 90%;
   justify-content: center;
+  row-gap: 1%;
   background-color: orange;
   height: 56%;
 }
@@ -469,12 +467,12 @@ a {
   grid-row: 1/1;
   grid-column: 1/1;
   z-index: 2;
+  justify-content: center;
+  align-content: center;
   top: 8%;
   left: 73%;
   height: 29px;
   width: 80px;
-  justify-content: center;
-  align-content: center;
   font-size: 14px;
   border-radius: 2px;
   color: #008766;
@@ -484,17 +482,17 @@ a {
 .main__home__restaurant__card img {
   grid-row: 1/1;
   grid-column: 1/1;
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 
 .main__home__restaurant__card__footer {
-  grid-row: 2/2;
-  display: grid;
   grid-template-columns: 80% 20%;
   grid-template-rows: 50% 50%;
+  grid-row: 2/2;
+  display: grid;
 }
 
 .main__home__restaurant__card__footer a {
@@ -525,17 +523,20 @@ a {
 footer {
   height: 10%;
   width: 100%;
-  color: #F6F6F6;
+  color: #f6f6f6;
 }
 
 ul {
   list-style-type: none;
 }
 
-
 * {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .body__menuPage {
@@ -545,10 +546,6 @@ ul {
 .nav__header {
   height: 63px;
   grid-template-columns: 10% 80% 10%;
-}
-
-a {
-  text-decoration: none;
 }
 
 .nav__link {
@@ -573,13 +570,13 @@ a {
 }
 
 .main__header {
+  grid-template-rows: 1fr;
+  grid-template-columns: 75% 25%;
   position: relative;
   top: -20px;
   height: 7%;
   border-radius: 20px 20px 0 0;
   background-color: #07664e;
-  grid-template-rows: 1fr;
-  grid-template-columns: 75% 25%;
 }
 
 .main__header__title {
@@ -587,7 +584,6 @@ a {
   align-items: center;
   grid-row: 1/1;
   grid-column: 1/1;
-  font-family: Shrikhand;
   font-size: 28px;
   font-weight: 400;
 }
@@ -622,17 +618,16 @@ a {
   font-weight: 300;
 }
 .menu__card {
-  background-color: aliceblue;
-  grid-row: span 1;
-  grid-column: span 2;
-  height: 100%;
-  width: 95%;
-  box-sizing: border-box;
-  border: solid 2px black;
-  border-radius: 20px;
   grid-template-columns: 2fr 1fr 40px 59px;
   grid-template-rows: 1fr 1fr;
-  font-family: Roboto;
+  grid-row: span 1;
+  grid-column: span 2;
+  box-sizing: border-box;
+  height: 100%;
+  width: 95%;
+  border: solid 2px black;
+  border-radius: 20px;
+  background-color: aliceblue;
 }
 .menu__card--orderTop {
   grid-row: 2/2;
@@ -645,23 +640,22 @@ a {
 }
 
 .menu__card__title {
-  background-color: yellow;
   grid-column: 1/3;
   grid-row: 1;
   font-size: 18px;
+  background-color: yellow;
   font-weight: 500;
   padding-left: 4%;
 }
 .menu__card__subtile {
-  background-color: yellowgreen;
   grid-column: 1/3;
   grid-row: 2/2;
   font-size: 15px;
   font-weight: 300;
   padding-left: 4%;
+  background-color: yellowgreen;
 }
 .menu__card__price {
-  background: salmon;
   grid-column: 3/5;
   grid-row: 2/2;
   justify-self: flex-end;
@@ -669,17 +663,18 @@ a {
   transition: width 1s;
   font-size: 15px;
   font-weight: 700;
+  background: salmon;
 }
 .menu__card__icon {
-  background-color: #99E2D0;
   grid-column: 4/5;
   grid-row: 1/3;
+  transition: width 1s ease;
+  overflow: hidden;
   justify-self: flex-end;
   width: 0%;
   height: 100%;
-  transition: width 1s ease;
-  overflow: hidden;
   margin: 0;
+  background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
 }
 .menu__card:hover .menu__card__icon {
@@ -725,14 +720,12 @@ footer {
   grid-row: 1/1;
   font-size: 18px;
   font-weight: 400;
-  font-family: Shrikhand;
 }
 
 .liste {
   grid-column: 2/2;
   grid-row: 2/2;
   row-gap: 1%;
-  font-family: Roboto;
 }
 
 /*# sourceMappingURL=style.css.map */

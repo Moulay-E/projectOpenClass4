@@ -1,4 +1,3 @@
-
 .noScroll {
     animation: temporaryNoScrolling 0s linear forwards;
   }
@@ -12,29 +11,27 @@
     }
   }
 
-  
   .loaderBackground {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  gap: 0;
-  margin: 0;
-  padding: 0;
+  @extend %grid;
   grid-template-rows: 35% 10% 10% 10% 35%;
   grid-template-columns: 10% 80% 10%;
-
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $colour-tertiary;
+  justify-items: center;
+  align-items: center;
   z-index: 2;
   animation-name: fadeInOut;
   animation-duration: 0s;
   animation-fill-mode: forwards;
   pointer-events: none;
   overflow-y: hidden;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $colour-tertiary;
 }
   @keyframes fadeInOut {
     0% {
@@ -47,41 +44,37 @@
   
     100% {
       opacity: 0;
-    //   display: none;
       z-index: 0;
     }
   }
 
-
 .loader {
+    display: inline-block;
+    position: relative;
+    animation: fadeOut 0s linear forwards;
     grid-row: 2/2;
     grid-column: 2/2;
-  
     z-index: 2;
     font-size: 48px;
-    display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: #f6f9fb;
     box-sizing: border-box;
     text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
     letter-spacing: 2px;
-    position: relative;
-    animation: fadeOut 0s linear forwards;
   }
   .loader::after {
-    content: 'Ohmyfood';
+    animation: animloader 0s linear infinite;
+    overflow: hidden;
     position: absolute;
+    box-sizing: border-box;
+    content: 'Ohmyfood';
     left: 0;
     top: 0;
     color: $colour-secondary ;
     width: 20%;
     height: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    animation: animloader 0s linear infinite;
   }
-  
   @keyframes animloader {
     0% {
       width: 0%;
@@ -91,19 +84,15 @@
     }
   }
 
-
 .ustansils--loader{
+  animation-name:fadeOut;
+  animation-duration: 0s;
     grid-row: 3/3;
     grid-column: 2/2;
-  
     z-index: 2;
-    animation-name:fadeOut;
-    animation-duration: 0s;
     color: $colour-secondary ;
     font-size: 40px;
-    // animation-fill-mode: forwards;
   }
-  
   @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -115,25 +104,23 @@
   }
   
   .lds-ellipsis {
-    grid-row: 4/4;
-    grid-column: 2/2;
-  
+    z-index: 2;
     display: inline-block;
     position: relative;
-    z-index: 2;
+    grid-row: 4/4;
+    grid-column: 2/2;
     width: 80px;
     height: 80px;
   }
   .lds-ellipsis div {
     position: absolute;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
     top: 33px;
     width: 13px;
     height: 13px;
     border-radius: 50%;
     background: $colour-primary;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
-  
   .lds-ellipsis div:nth-child(1) {
     left: 8px;
     animation: lds-ellipsis1 0.6s infinite;
@@ -175,10 +162,8 @@
     }
   }
   
-  
   .appear__gradually {
     opacity: 0;
-    // animation: appear 10.5s linear forwards;
     animation-name: appear;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
@@ -205,7 +190,6 @@
     }
     
   }
-
   .nav__header{
     animation-delay: 0.5s;
   }

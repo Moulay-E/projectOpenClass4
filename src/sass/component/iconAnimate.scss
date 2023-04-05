@@ -14,8 +14,8 @@
       background-position: right center;
       color: transparent;
       background-clip: text;
-      -webkit-background-clip: text;
       transition: background-position 0.5s ease-out;
+      -webkit-background-clip: text;
   }
   .heart1:hover .heart2 {
       background-position: center left;
