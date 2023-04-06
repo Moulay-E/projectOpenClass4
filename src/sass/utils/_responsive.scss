@@ -1,9 +1,37 @@
 
-@media  screen and (min-width: 1023px) {
-    .header-img img{
+// @media  screen and (min-width: 1023px) {
+//     .header-img img{
+//         height: 383px;
+//     }
+//     .header-img {
+//         height: 583px;
+//     }
+// }
+.main__header__title{
+
+    @media  screen and (min-width: 1023px) {
         height: 383px;
     }
-    .header-img {
-        height: 583px;
+}
+
+.main__header{
+
+    @media  screen and (min-width: 1023px) {
+        height: 383px;
+        background-color: red;
     }
 }
+// a test
+
+@mixin media-query($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+  
+  @include media-query(1023px) {
+    .ma_classe {
+      /* styles pour les écrans de largeur supérieure à 1023px */
+    }
+  }
+  

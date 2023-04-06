@@ -1,4 +1,23 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+@media screen and (min-width: 1023px) {
+  .main__header__title {
+    height: 383px;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .main__header {
+    height: 383px;
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .ma_classe {
+    /* styles pour les écrans de largeur supérieure à 1023px */
+  }
+}
 .liste, .footer__title, footer, .order, .menu__card__icon, .menu__card, .menu__title, .menu, .main__header__title, .main__header, .nav__header, .main__home__restaurant__card__footer__heart--grid, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .new, .main__home__restaurant__card, .main__home__restaurant, .main__home, .btn--gris h4, .btn--gris, .header__home__liste, .nav__home__main__title, .nav__home__main, .nav__home__subtile, .nav__home__title, .nav__home, .loaderBackground {
   display: grid;
 }
@@ -530,14 +549,6 @@ ul {
   list-style-type: none;
 }
 
-@media screen and (min-width: 1023px) {
-  .header-img img {
-    height: 383px;
-  }
-  .header-img {
-    height: 583px;
-  }
-}
 * {
   margin: 0;
   padding: 0;
