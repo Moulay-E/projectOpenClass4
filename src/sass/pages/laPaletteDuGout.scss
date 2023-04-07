@@ -13,10 +13,12 @@ height: 1590px;
   height: 63px;
   @extend %grid;
   grid-template-columns: 10% 80% 10%;
+  @extend %font-secondary;
 }
 .nav__link {
 background-color: aqua;
 justify-self: center;
+align-self: center;
 }
 .fa-arrow-left {
   justify-self: center;
@@ -26,13 +28,7 @@ justify-self: center;
   background-color: red;
     width: 100%;
     height: 17%;
-    // @extend %media-query{
-    //   height: 383px;
-    // };
-    @media  screen and (min-width: 1023px) {
-      height: 383px;
-     
-  }
+
 }
 .header__img img {
   object-fit: cover;
@@ -71,7 +67,7 @@ justify-self: center;
     @extend %grid ;
     justify-items: center;
     grid-template-columns: 90% 10%;
-    grid-template-rows: 50px repeat(3, 69px) 10px;
+    grid-template-rows: 50px repeat(3, 69px) 30px;
     row-gap: 10px;
     border-radius: 20px 20px 0 0 ;
     background-color: aqua;
@@ -224,7 +220,7 @@ footer {
   font-weight: 400;
   @extend %font-secondary;
 }
-.liste {
+.footer__liste {
   grid-column: 2/2;
   grid-row: 2/2;
   @extend %grid ;

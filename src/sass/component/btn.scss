@@ -1,4 +1,4 @@
-.order__btn {
+.btn--pink__effect {
     background: linear-gradient(45deg, rgba(236,93,197,1) 0%, rgba(147,86,220,1) 100%);
     color: white;
     border-radius: 25px;
@@ -9,7 +9,7 @@
     font-size: 16px;
     font-weight: 500;
 }
-.order__btn:hover {
+.btn--pink__effect:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   filter: brightness(1.1);
 }

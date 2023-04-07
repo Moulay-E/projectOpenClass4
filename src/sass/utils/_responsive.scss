@@ -1,37 +1,103 @@
 
-// @media  screen and (min-width: 1023px) {
-//     .header-img img{
-//         height: 383px;
-//     }
-//     .header-img {
-//         height: 583px;
-//     }
-// }
-.main__header__title{
 
-    @media  screen and (min-width: 1023px) {
-        height: 383px;
-    }
-}
 
-.main__header{
 
-    @media  screen and (min-width: 1023px) {
-        height: 383px;
-        background-color: red;
-    }
-}
-// a test
+// PAGE la palette du gout  //
+@media screen and (min-width: 1023px) {
 
-@mixin media-query($breakpoint) {
-    @media screen and (min-width: $breakpoint) {
-      @content;
-    }
+  .body__menuPage{
+    height: 1705px;
   }
-  
-  @include media-query(1023px) {
-    .ma_classe {
-      /* styles pour les écrans de largeur supérieure à 1023px */
+  .nav__header {
+      height: 96.34px;
+      grid-template-columns: 6% 88% 6%;
     }
+    .header__img {
+      height: 383px;
+    }
+    .header__img img {
+      height: 383px;
+    }
+    .main{
+      height: 1152px;
+     
+      background-color: purple;
+      display: grid
+    }
+    .main__contenair {
+      display: grid;
+      justify-self: center;
+      width: 73%;
+    }
+    .main__header {
+      top: 60px ;
+      height: 90px;
+      grid-template-columns: 28% 40% 23%;
+    }
+    .main__header__title{
+      grid-column: 2/2;
+    }
+    .laPaletteDuGout__heart--grid{
+      grid-column: 3/3;
+      justify-self: flex-start;
+    }
+
+    .menu {
+      grid-template-rows: 50px repeat(3, 69px) 40px;
+    }
+    .menu__title{
+      width: 55%;
+    }
+    .menu__card{
+      width: 60%;
+    }
+    // .main > * {
+    //   margin: 0;
+    // }
+    
+    
+  .order{
+    height: 102px;
+    background-color: beige;
   }
-  
+  .order__container{
+    width: 73vw;
+    height: 102px;
+    display: grid;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: aqua;
+  }
+
+  footer {
+    height: 114px;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-rows: 64px 50px;
+  }
+  .footer__title{
+    grid-column: 3/3;
+    grid-row: 2/2;
+    align-self: flex-start;
+    justify-self: center;
+    font-size: 1.25vw;
+  }
+  .footer__liste{
+    font-size: 1.111vw;
+    grid-column: 2/2;
+    grid-template-columns: 34% 31% 24% 11%;
+  }
+  ul li:nth-child(1){
+    grid-column: 1/1;
+  }
+  ul li:nth-child(2){
+    grid-column: 2/2;
+  }
+  ul li:nth-child(3){
+    grid-column: 3/3;
+  }
+  ul li:nth-child(4){
+    grid-column: 4/4;
+  }
+
+
+  }
