@@ -12,6 +12,10 @@
       height: 96.34px;
       grid-template-columns: 6% 88% 6%;
     }
+    .nav__home__subtile{
+      grid-template-columns: minmax(23%,37%) 30px 33% minmax(100px,151px);
+    }
+
     .header__img {
       height: 383px;
     }
@@ -19,7 +23,7 @@
       height: 383px;
     }
     .main{
-      height: 1152px;
+      height: 1076px;
      
       background-color: purple;
       display: grid
@@ -28,11 +32,13 @@
       display: grid;
       justify-self: center;
       width: 73%;
+      grid-template-rows: 80px repeat(3,1fr);
     }
     .main__header {
-      top: 60px ;
-      height: 90px;
+      top: -28px ;
+      height: 110px;
       grid-template-columns: 28% 40% 23%;
+      align-content: flex-end;
     }
     .main__header__title{
       grid-column: 2/2;
@@ -43,7 +49,7 @@
     }
 
     .menu {
-      grid-template-rows: 50px repeat(3, 69px) 40px;
+      grid-template-rows: 30px repeat(3, 69px) 52px;
     }
     .menu__title{
       width: 55%;
