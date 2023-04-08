@@ -12,9 +12,6 @@
       height: 96.34px;
       grid-template-columns: 6% 88% 6%;
     }
-    .nav__home__subtile{
-      grid-template-columns: minmax(23%,37%) 30px 33% minmax(100px,151px);
-    }
 
     .header__img {
       height: 383px;
@@ -106,4 +103,64 @@
   }
 
 
+  }
+
+
+  //page home
+  .body__home{
+    height: 1395px;
+  }
+
+  .nav__home {
+    height: auto;
+  }
+  .nav__home__subtile{
+    grid-template-columns: 35px 109px;
+    justify-content: center;
+    align-content: center;
+
+    & i {
+      grid-column: 1/1;
+    }
+    & h2 {
+      grid-column: 2/2;
+    }
+  }
+  .nav__home__main {
+    height: 239px;
+  }
+
+  .header__home {
+    height: 228px;
+
+    &__liste {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3,22%);
+    justify-content: center;
+    column-gap: 2%;
+  }
+}
+  .btn--gris {
+    grid-row: 2/2;
+    width: 322px;
+  }
+
+  .main__home__restaurant {
+    grid-template-rows: 15px repeat(2, 251px) 5%;
+    grid-template-columns: 34% 34%;
+    column-gap: 6%;
+    row-gap: 50px;
+    height: 651px;
+    &__h2{
+      position: relative;
+      top: 34px;
+    }
+  }
+  .france--grid {
+    grid-row: 2/2;
+    grid-column: 2/2;
+  }
+  .delice--grid {
+    grid-row: 3/3;
+    grid-column: 2/2;
   }
