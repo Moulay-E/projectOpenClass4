@@ -19,6 +19,8 @@ a {
     font-size: 30px;
     font-weight: 400;
     font-style: italic;
+    width: 100%;
+    background-color: $color-background-secondary;
   }
   &__subtile {
     grid-template-columns: minmax(23%,37%) 30px 33% minmax(100px,151px);
@@ -26,6 +28,7 @@ a {
     justify-self: center;
     width: 100%;
     align-items: center;
+    @extend %font-primary;
 
     & i {
       grid-column: 2/2;
@@ -54,12 +57,14 @@ a {
     align-items: center;
     font-size: 24px;
     font-weight: 700;
+    @extend %font-primary;
   }
   &__subtile {
     grid-row: 3/3;
     width: 85%;
     font-size: 18px;
     font-weight: 300;
+    @extend %font-primary;
   }
   &__btn {
     grid-row: 5/5;
@@ -104,11 +109,12 @@ a {
     @extend %font-primary;
     font-size: 16px;
     font-weight: 500;
+    @extend %font-primary;
   }
 }
 .fa-circle {
   position: relative;
-  left: -8px;
+  left: -12px;
   color: $colour-primary;
   font-size: 24px;
 }
@@ -128,7 +134,9 @@ a {
   color: $color-background;
   font-size: 14px;
 }
-
+.fa-store {
+  color: $colour-primary;
+}
 .main__home {
   height: 51%;
   background-color: aqua;
@@ -148,6 +156,7 @@ a {
   align-self: flex-end;
   font-size: 24px;
   font-weight: 700;
+  @extend %font-primary;
 }
 
 .main__home__restaurant__card {
@@ -174,12 +183,13 @@ a {
   position: relative;
   grid-row: 1/1;
   grid-column: 1/1;
-  z-index: 2;
+  z-index: 1;
   @extend %grid;
   justify-content: center;
+  justify-self: flex-end;
   align-content: center;
   top: 8%;
-  left: 73%;
+  right: 4%;
   height: 29px;
   width: 80px;
   font-size: 14px;
@@ -204,11 +214,12 @@ a {
 .main__home__restaurant__card__footer a {
   grid-column: 1/1;
   grid-row: 1/1;
+  align-items: flex-end;
   @extend %grid;
-  align-items: center;
   padding-left: 3%;
   font-size: 18px;
   font-weight: 700;
+  @extend %font-primary;
 }
 .main__home__restaurant__card__footer p {
   grid-column: 1/1;
@@ -218,6 +229,8 @@ a {
   padding-left: 3%;
   font-size: 17px;
   font-weight: 300;
+  @extend %font-primary;
+
 }
 .main__home__restaurant__card__footer__heart--grid {
   grid-column: 2/2;
