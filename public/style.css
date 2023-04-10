@@ -3,7 +3,7 @@
   display: grid;
 }
 
-.footer__liste, .menu__card, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .main__home__restaurant__h2, .btn--gris h4, .header__home__liste__title, .nav__home__main__subtile, .nav__home__main__title, .nav__home__main, .nav__home__subtile {
+.footer__liste, .menu__card, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .new, .main__home__restaurant__h2, .btn--gris h4, .header__home__liste__title, .nav__home__main__subtile, .nav__home__main__title, .nav__home__main, .nav__home__subtile {
   font-family: Roboto;
 }
 
@@ -611,7 +611,6 @@ a {
   grid-template-columns: 90% 10%;
   grid-template-rows: 50px repeat(3, 69px) 30px;
   row-gap: 10px;
-  border-radius: 20px 20px 0 0;
   background-color: aqua;
   border: solid 2px blue;
   align-items: flex-start;
@@ -647,6 +646,13 @@ a {
 }
 .menu__card--orderBottom {
   grid-row: 4/4;
+}
+.menu__card--orderLast {
+  grid-row: 5/5;
+}
+
+.body__note--size .menu--moreColumn {
+  grid-template-rows: 50px repeat(4, 69px) 30px;
 }
 
 .menu__card__title {
@@ -880,6 +886,9 @@ footer {
     grid-row: 2/2;
     width: 100%;
   }
+  .btn--gris h4 {
+    font-size: 15px;
+  }
   .main__home__restaurant {
     grid-template-rows: 15px repeat(2, 251px) 5%;
     grid-template-columns: 34% 34%;
@@ -892,7 +901,7 @@ footer {
     top: 34px;
   }
   .new {
-    width: 16%;
+    width: 18%;
   }
   .france--grid {
     grid-row: 2/2;
@@ -901,6 +910,11 @@ footer {
   .delice--grid {
     grid-row: 3/3;
     grid-column: 2/2;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 330px) {
+  .nav__home__subtile {
+    grid-template-columns: minmax(23%, 37%) 30px 37% minmax(100px, 151px);
   }
 }
 

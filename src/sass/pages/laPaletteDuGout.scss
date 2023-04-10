@@ -69,7 +69,6 @@ align-self: center;
     grid-template-columns: 90% 10%;
     grid-template-rows: 50px repeat(3, 69px) 30px;
     row-gap: 10px;
-    border-radius: 20px 20px 0 0 ;
     background-color: aqua;
     border: solid 2px blue;
     align-items: flex-start;
@@ -109,8 +108,18 @@ align-self: center;
         &--orderBottom {
           grid-row: 4/4;
         }
+        &--orderLast{
+          grid-row: 5/5;
+        }
     }
 }
+//add a column for page : note Enchante
+.body__note--size{
+  & .menu--moreColumn{
+    grid-template-rows: 50px repeat(4, 69px) 30px;
+  }
+}
+//
 .menu__card {
   &__title {
     grid-column: 1/4;
