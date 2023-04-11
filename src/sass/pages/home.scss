@@ -7,7 +7,6 @@ a {
 }
 .nav__home {
   height: 19%;
-  background-color: orange;
   grid-template-rows: 63px 50px 76%;
   @extend %grid;
 
@@ -20,7 +19,7 @@ a {
     font-weight: 400;
     font-style: italic;
     width: 100%;
-    background-color: $color-background-secondary;
+    background-color: $color-background;
   }
   &__subtile {
     grid-template-columns: minmax(23%,37%) 30px 33% minmax(100px,151px);
@@ -29,6 +28,7 @@ a {
     width: 100%;
     align-items: center;
     @extend %font-primary;
+    background-color: $color-background-secondary;
 
     & i {
       grid-column: 2/2;
@@ -47,7 +47,7 @@ a {
   grid-template-rows: 14% 24% 16% 9% 50px 20%;
   text-align: center;
   justify-items: center;
-  background-color: purple;
+  background-color: $color-background-tertiary;
   @extend %font-primary;
 
   &__title {
@@ -74,7 +74,7 @@ a {
 .header__home {
   height: 18%;
   width: 100%;
-  background-color: yellow;
+  background-color: $color-background;
 }
 
 .header__home__liste {
@@ -87,7 +87,6 @@ a {
     align-self: center;
     justify-self: flex-start;
     padding-left: 5%;
-    background-color: aqua;
     @extend %font-primary;
     font-size: 24px;
     font-weight: 700;
@@ -102,15 +101,10 @@ a {
   width: 85%;
   border-radius: 20px;
   color: black;
-  background-color: $color-background-secondary;
-  & h4 {
-    @extend %grid;
-    justify-content: flex-start;
-    @extend %font-primary;
-    font-size: 16px;
-    font-weight: 500;
-    @extend %font-primary;
-  }
+  background-color: $color-background-tertiary;
+  font-size: 16px;
+  font-weight: 500;
+  @extend %font-primary;
 }
 .fa-circle {
   position: relative;
@@ -147,7 +141,7 @@ a {
   grid-template-columns: 90%;
   justify-content: center;
   row-gap: 1%;
-  background-color: orange;
+  background-color: $color-background-tertiary;
   height: 56%;
   @extend %grid;
 }
@@ -163,7 +157,7 @@ a {
   @extend %grid;
   grid-template-rows: 70% 30%;
   grid-template-columns: 100%;
-  background-color: red;
+  background-color: $color-background;
   height: 100%;
   border-radius: 15px;
 }
