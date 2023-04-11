@@ -5,6 +5,9 @@
 a {
   text-decoration: none;
 }
+.body__note--size{
+  height: 1670px;
+}
 .body__menuPage{
 height: 1590px;
 }
@@ -232,11 +235,12 @@ footer {
   font-weight: 400;
   @extend %font-secondary;
 }
-.footer__liste {
+.footer__liste  , .footer__liste__mail{
   grid-column: 2/2;
   grid-row: 2/2;
   @extend %grid ;
   row-gap: 1%;
   @extend %font-primary;
+  color: $color-background;
 }
 

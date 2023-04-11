@@ -5,6 +5,7 @@ a {
   text-decoration: none;
   color: black;
 }
+
 .nav__home {
   height: 19%;
   grid-template-rows: 63px 50px 76%;
@@ -209,10 +210,6 @@ a {
   overflow: hidden;
   border-radius: 15px 15px 0 0;
 }
-// .main__home__restaurant__card__img img {
-//   object-fit: cover;
-//   border-radius: 15px 15px 0 0;
-// }
 .main__home__restaurant__card__footer {
   grid-template-columns: 80% 20%;
   grid-template-rows: 50% 50%;
@@ -253,7 +250,7 @@ footer {
   width: 100%;
   color: #f6f6f6;
 }
-ul {
+ul{
   list-style-type: none;
 }
 

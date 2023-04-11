@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-.footer__liste, .footer__title, footer, .order, .menu__card__icon, .menu__card, .menu__title, .menu, .main__header__title, .main__header, .nav__header, .main__home__restaurant__card__footer__heart--grid, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .new, .main__home__restaurant__card, .main__home__restaurant, .main__home, .btn--gris, .header__home__liste, .nav__home__main__title, .nav__home__main, .nav__home__subtile, .nav__home__title, .nav__home, .loaderBackground {
+.footer__liste, .footer__liste__mail, .footer__title, footer, .order, .menu__card__icon, .menu__card, .menu__title, .menu, .main__header__title, .main__header, .nav__header, .main__home__restaurant__card__footer__heart--grid, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .new, .main__home__restaurant__card, .main__home__restaurant, .main__home, .btn--gris, .header__home__liste, .nav__home__main__title, .nav__home__main, .nav__home__subtile, .nav__home__title, .nav__home, .loaderBackground {
   display: grid;
 }
 
-.footer__liste, .menu__card, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .new, .main__home__restaurant__h2, .btn--gris, .header__home__liste__title, .nav__home__main__subtile, .nav__home__main__title, .nav__home__main, .nav__home__subtile {
+.footer__liste, .footer__liste__mail, .menu__card, .main__home__restaurant__card__footer p, .main__home__restaurant__card__footer a, .new, .main__home__restaurant__h2, .btn--gris, .header__home__liste__title, .nav__home__main__subtile, .nav__home__main__title, .nav__home__main, .nav__home__subtile {
   font-family: Roboto;
 }
 
@@ -280,23 +280,6 @@
   background-position: center left;
 }
 
-.btn--pink__effect {
-  background: linear-gradient(45deg, rgb(236, 93, 197) 0%, rgb(147, 86, 220) 100%);
-  color: white;
-  border-radius: 25px;
-  border: unset;
-  height: 50px;
-  width: 218px;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.btn--pink__effect:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  filter: brightness(1.1);
-}
-
 .body__home {
   height: 2441px;
 }
@@ -554,6 +537,10 @@ a {
   text-decoration: none;
 }
 
+.body__note--size {
+  height: 1670px;
+}
+
 .body__menuPage {
   height: 1590px;
 }
@@ -763,13 +750,90 @@ footer {
   font-weight: 400;
 }
 
-.footer__liste {
+.footer__liste, .footer__liste__mail {
   grid-column: 2/2;
   grid-row: 2/2;
   row-gap: 1%;
+  color: #FFFFFF;
+}
+
+.btn--pink__effect {
+  background: linear-gradient(45deg, rgb(236, 93, 197) 0%, rgb(147, 86, 220) 100%);
+  color: white;
+  border-radius: 25px;
+  border: unset;
+  height: 50px;
+  width: 218px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn--pink__effect:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.1);
 }
 
 @media screen and (min-width: 1023px) {
+  .body__home {
+    height: 1345px;
+  }
+  .nav__home {
+    height: auto;
+  }
+  .nav__home__subtile {
+    grid-template-columns: 35px 109px;
+    justify-content: center;
+    align-content: center;
+  }
+  .nav__home__subtile i {
+    grid-column: 1/1;
+  }
+  .nav__home__subtile h2 {
+    grid-column: 2/2;
+  }
+  .nav__home__main {
+    height: 239px;
+  }
+  .nav__home__main__title {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .header__home {
+    height: 228px;
+  }
+  .header__home__liste {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 22%);
+    justify-content: center;
+    column-gap: 2%;
+  }
+  .btn--gris {
+    grid-row: 2/2;
+    width: 100%;
+  }
+  .main__home__restaurant {
+    grid-template-rows: 26px repeat(2, 251px) 5%;
+    grid-template-columns: 34% 34%;
+    column-gap: 6%;
+    row-gap: 50px;
+    height: 651px;
+  }
+  .main__home__restaurant__h2 {
+    position: relative;
+    top: 26px;
+  }
+  .new {
+    width: 18%;
+  }
+  .france--grid {
+    grid-row: 2/2;
+    grid-column: 2/2;
+  }
+  .delice--grid {
+    grid-row: 3/3;
+    grid-column: 2/2;
+  }
   .body__menuPage {
     height: 1705px;
   }
@@ -857,65 +921,6 @@ footer {
   }
   ul li:nth-child(4) {
     grid-column: 4/4;
-  }
-  .body__home {
-    height: 1345px;
-  }
-  .nav__home {
-    height: auto;
-  }
-  .nav__home__subtile {
-    grid-template-columns: 35px 109px;
-    justify-content: center;
-    align-content: center;
-  }
-  .nav__home__subtile i {
-    grid-column: 1/1;
-  }
-  .nav__home__subtile h2 {
-    grid-column: 2/2;
-  }
-  .nav__home__main {
-    height: 239px;
-  }
-  .nav__home__main__title {
-    font-size: 40px;
-    font-weight: 700;
-  }
-  .header__home {
-    height: 228px;
-  }
-  .header__home__liste {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(3, 22%);
-    justify-content: center;
-    column-gap: 2%;
-  }
-  .btn--gris {
-    grid-row: 2/2;
-    width: 100%;
-  }
-  .main__home__restaurant {
-    grid-template-rows: 15px repeat(2, 251px) 5%;
-    grid-template-columns: 34% 34%;
-    column-gap: 6%;
-    row-gap: 50px;
-    height: 651px;
-  }
-  .main__home__restaurant__h2 {
-    position: relative;
-    top: 34px;
-  }
-  .new {
-    width: 18%;
-  }
-  .france--grid {
-    grid-row: 2/2;
-    grid-column: 2/2;
-  }
-  .delice--grid {
-    grid-row: 3/3;
-    grid-column: 2/2;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 330px) {

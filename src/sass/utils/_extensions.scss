@@ -9,15 +9,4 @@
 %font-secondary {
     font-family: Shrikhand;
 }
-
-@mixin media-query {
-    @media screen and (min-width: 1023px) {
-      @content;
-    }
-  }
-  
-  %media-query {
-    @include media-query {
-    }
-  }
   

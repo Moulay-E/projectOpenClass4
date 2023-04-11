@@ -1,9 +1,74 @@
 
+  //pour desktop
+  @media screen and (min-width: 1023px) {
+    //page home/index
+    .body__home{
+      height: 1345px; //1395px;
+    }
+  
+    .nav__home {
+      height: auto;
+    }
+    .nav__home__subtile{
+      grid-template-columns: 35px 109px;
+      justify-content: center;
+      align-content: center;
+  
+      & i {
+        grid-column: 1/1;
+      }
+      & h2 {
+        grid-column: 2/2;
+      }
+    }
+    .nav__home__main {
+      height: 239px;
+      &__title{
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+  
+    .header__home {
+      height: 228px;
+  
+      &__liste {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: repeat(3,22%);
+      justify-content: center;
+      column-gap: 2%;
+    }
+  }
+    .btn--gris {
+      grid-row: 2/2;
+      width: 100%;
+    }
+  
+    .main__home__restaurant {
+      grid-template-rows: 26px repeat(2, 251px) 5%;
+      grid-template-columns: 34% 34%;
+      column-gap: 6%;
+      row-gap: 50px;
+      height: 651px;
+      &__h2{
+        position: relative;
+        top: 26px;
+      }
+    }
+    .new{
+      width: 18%;
+    }
+    .france--grid {
+      grid-row: 2/2;
+      grid-column: 2/2;
+    }
+    .delice--grid {
+      grid-row: 3/3;
+      grid-column: 2/2;
+    }
 
+// PAGE menu   //
 
-
-// PAGE la palette du gout  //
-@media screen and (min-width: 1023px) {
 
   .body__menuPage{
     height: 1705px;
@@ -55,11 +120,7 @@
     .menu__card{
       width: 60%;
     }
-    // .main > * {
-    //   margin: 0;
-    // }
-    
-    
+
   .order{
     height: 102px;
   }
@@ -70,7 +131,6 @@
     justify-content: center;
     align-content: flex-start;
     background-color: $color-background-secondary;
-
   }
 
   footer {
@@ -102,83 +162,11 @@
   ul li:nth-child(4){
     grid-column: 4/4;
   }
-  
-  
-  
-    //page home
-    .body__home{
-      height: 1345px; //1395px;
-    }
-  
-    .nav__home {
-      height: auto;
-    }
-    .nav__home__subtile{
-      grid-template-columns: 35px 109px;
-      justify-content: center;
-      align-content: center;
-  
-      & i {
-        grid-column: 1/1;
-      }
-      & h2 {
-        grid-column: 2/2;
-      }
-    }
-    .nav__home__main {
-      height: 239px;
-      &__title{
-        font-size: 40px;
-        font-weight: 700;
-      }
-    }
-  
-    .header__home {
-      height: 228px;
-  
-      &__liste {
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: repeat(3,22%);
-      justify-content: center;
-      column-gap: 2%;
-    }
-  }
-    .btn--gris {
-      grid-row: 2/2;
-      width: 100%;
+}
 
-      // & p{
-      //   font-size: 15px;
-      // }
-    }
-  
-    .main__home__restaurant {
-      grid-template-rows: 15px repeat(2, 251px) 5%;
-      grid-template-columns: 34% 34%;
-      column-gap: 6%;
-      row-gap: 50px;
-      height: 651px;
-      &__h2{
-        position: relative;
-        top: 34px;
-      }
-    }
-    .new{
-      width: 18%;
-    }
-    .france--grid {
-      grid-row: 2/2;
-      grid-column: 2/2;
-    }
-    .delice--grid {
-      grid-row: 3/3;
-      grid-column: 2/2;
-    }
-
+//Mobile
+@media screen and (min-width: 320px) and (max-width: 330px) {
+  .nav__home__subtile {
+    grid-template-columns: minmax(23%, 37%) 30px 37% minmax(100px, 151px);
   }
-
-  @media screen and (min-width: 320px) and (max-width: 330px) {
-    .nav__home__subtile {
-      grid-template-columns: minmax(23%, 37%) 30px 37% minmax(100px, 151px);
-    }
-  }
+}
