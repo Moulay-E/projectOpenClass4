@@ -31,13 +31,12 @@
   
     .header__home {
       height: 228px;
-  
-      &__liste {
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: repeat(3,22%);
-      justify-content: center;
-      column-gap: 2%;
-    }
+        &__liste {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(3,22%);
+        justify-content: center;
+        column-gap: 2%;
+      }
   }
     .btn--gris {
       grid-row: 2/2;
@@ -59,13 +58,17 @@
       width: 18%;
     }
     .france--grid {
-      grid-row: 2/2;
-      grid-column: 2/2;
+      grid-row: 3/3;
+      grid-column: 1/1;
     }
     .delice--grid {
       grid-row: 3/3;
       grid-column: 2/2;
     }
+    .note--grid {
+      grid-row: 2/2;
+      grid-column: 2/2;
+  }
 
 // PAGE menu   //
 
