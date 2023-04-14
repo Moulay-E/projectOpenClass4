@@ -74,8 +74,6 @@ align-self: center;
     grid-template-rows: 50px repeat(3, 69px) 30px;
     row-gap: 10px;
     background-color: $color-background-tertiary;
-    // background-color: aqua;
-    // border: solid 2px blue;
     align-items: flex-start;
     
     &__title{
