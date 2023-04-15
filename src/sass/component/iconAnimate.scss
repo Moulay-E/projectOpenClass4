@@ -4,6 +4,7 @@
   .heart1::before {
       position: absolute;
       z-index: 1;
+      opacity: 1;
   }
   .heart2 {
       position: relative;
@@ -17,6 +18,13 @@
       transition: background-position 0.5s ease-out;
       -webkit-background-clip: text;
   }
-  .heart1:hover .heart2 {
-      background-position: center left;
+  .heart1:hover {
+    &::before{
+
+        opacity: 0;
+    }
+      & .heart2 {
+          background-position: center left;
+      }
+     
   }

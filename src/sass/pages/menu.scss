@@ -99,7 +99,7 @@ align-self: center;
       box-sizing: border-box;
       height: 100%;
       width: 95%;
-      border: solid 2px black;
+      box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
       border-radius: 20px;
       @extend %grid ;
       background-color: $color-background;
@@ -178,7 +178,7 @@ align-self: center;
     & .menu__card__icon {
        background-color: $colour-tertiary;
        width: 100%;
-       & .fa-bell{
+       & .fa-check-circle{
            width: 100%;
        }
       }
@@ -196,7 +196,7 @@ align-self: center;
   }
 
 }
-.fa-bell {
+.fa-check-circle {
     display: grid !important;
     align-items: center;
     justify-items: center;

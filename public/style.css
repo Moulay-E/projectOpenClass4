@@ -12,7 +12,7 @@
 }
 
 .btn--pink__effect {
-  background: linear-gradient(45deg, rgb(236, 93, 197) 0%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(183deg, rgb(236, 93, 197) 0%, rgb(147, 86, 220) 87%);
   color: white;
   border-radius: 25px;
   border: unset;
@@ -262,6 +262,7 @@
 .heart1::before {
   position: absolute;
   z-index: 1;
+  opacity: 1;
 }
 
 .heart2 {
@@ -276,6 +277,9 @@
   -webkit-background-clip: text;
 }
 
+.heart1:hover::before {
+  opacity: 0;
+}
 .heart1:hover .heart2 {
   background-position: center left;
 }
@@ -370,6 +374,8 @@ a {
   border-radius: 20px;
   color: black;
   background-color: #F6F6F6;
+  border: 0px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   font-size: 16px;
   font-weight: 500;
 }
@@ -399,6 +405,10 @@ a {
   top: -3px;
   color: #FFFFFF;
   font-size: 14px;
+}
+
+.fa-mobile-alt, .fa-list-ul {
+  color: #7E7E7E;
 }
 
 .fa-store {
@@ -632,7 +642,7 @@ a {
   box-sizing: border-box;
   height: 100%;
   width: 95%;
-  border: solid 2px black;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   background-color: #FFFFFF;
 }
@@ -703,7 +713,7 @@ a {
   background-color: #99E2D0;
   width: 100%;
 }
-.menu__card:hover .menu__card__icon .fa-bell {
+.menu__card:hover .menu__card__icon .fa-check-circle {
   width: 100%;
 }
 .menu__card:hover .menu__card__title {
@@ -716,7 +726,7 @@ a {
   width: 100%;
 }
 
-.fa-bell {
+.fa-check-circle {
   display: grid !important;
   align-items: center;
   justify-items: center;
@@ -758,7 +768,7 @@ footer {
 }
 
 .btn--pink__effect {
-  background: linear-gradient(45deg, rgb(236, 93, 197) 0%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(183deg, rgb(236, 93, 197) 0%, rgb(147, 86, 220) 87%);
   color: white;
   border-radius: 25px;
   border: unset;
