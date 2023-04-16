@@ -18,7 +18,7 @@
       transition: background-position 0.5s ease-out;
       -webkit-background-clip: text;
   }
-  .heart1:hover {
+  .heart1:hover , .heart1:active{
     &::before{
 
         opacity: 0;

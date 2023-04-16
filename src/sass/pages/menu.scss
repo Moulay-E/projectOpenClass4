@@ -174,7 +174,7 @@ align-self: center;
     background-color: $colour-tertiary;
     border-radius: 0 20px 20px 0;
   }
-  &:hover {
+  &:hover, .menu__card:active {
     & .menu__card__icon {
        background-color: $colour-tertiary;
        width: 100%;
